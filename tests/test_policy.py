@@ -14,3 +14,8 @@ class PolicyTests(unittest.TestCase):
         self.assertFalse(
             allows_internet_egress("internal")
         )
+        
+    def test_nat_allows_internet(self):
+        self.assertTrue(
+            allows_internet_egress("nat")
+        )
